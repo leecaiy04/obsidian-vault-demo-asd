@@ -1,0 +1,9 @@
+views:
+  - type: table
+    name: 表格
+    order:
+      - file.name
+      - created
+      - type
+  - type: cards
+    name: 视图

@@ -49,252 +49,182 @@
       }
     },
     {
-      "id": "9cbdcbb6-0f9d-4c04-982d-b0402c243e3d",
-      "name": "归档本文件",
-      "type": "Macro",
+      "id": "0433a84f-dbb3-4ab4-b04b-6a5dae1c88e9",
+      "name": "归档",
+      "type": "Multi",
       "command": true,
-      "runOnStartup": false,
-      "macro": {
-        "name": "归档本文件",
-        "id": "f6526228-09e9-4366-a784-e7ee9b79557e",
-        "commands": [
-          {
-            "name": "auto_archive_active",
-            "type": "UserScript",
-            "id": "4629d372-02fc-4471-8045-b80233a3fc81",
-            "path": "99-模板/Scripts/auto_archive_active.js",
-            "settings": {}
+      "choices": [
+        {
+          "id": "aafba8a0-f19a-442c-91fc-fce5c203a46d",
+          "name": "归档00Inbox所有文件",
+          "type": "Macro",
+          "command": true,
+          "runOnStartup": false,
+          "macro": {
+            "name": "归档00Inbox所有文件",
+            "id": "139c9756-6b5a-4083-88b2-ad78e5a31b64",
+            "commands": [
+              {
+                "name": "auto_archive_all",
+                "type": "UserScript",
+                "id": "6c2d14b2-0a92-4d61-a954-221e1facf7ae",
+                "path": "99-模板/Scripts/auto_archive_all.js",
+                "settings": {}
+              }
+            ]
           }
-        ]
-      }
-    },
-    {
-      "id": "aafba8a0-f19a-442c-91fc-fce5c203a46d",
-      "name": "归档00Inbox所有文件",
-      "type": "Macro",
-      "command": true,
-      "runOnStartup": false,
-      "macro": {
-        "name": "归档00Inbox所有文件",
-        "id": "139c9756-6b5a-4083-88b2-ad78e5a31b64",
-        "commands": [
-          {
-            "name": "auto_archive_all",
-            "type": "UserScript",
-            "id": "6c2d14b2-0a92-4d61-a954-221e1facf7ae",
-            "path": "99-模板/Scripts/auto_archive_all.js",
-            "settings": {}
+        },
+        {
+          "id": "9cbdcbb6-0f9d-4c04-982d-b0402c243e3d",
+          "name": "归档本文件",
+          "type": "Macro",
+          "command": true,
+          "runOnStartup": false,
+          "macro": {
+            "name": "归档本文件",
+            "id": "f6526228-09e9-4366-a784-e7ee9b79557e",
+            "commands": [
+              {
+                "name": "auto_archive_active",
+                "type": "UserScript",
+                "id": "4629d372-02fc-4471-8045-b80233a3fc81",
+                "path": "99-模板/Scripts/auto_archive_active.js",
+                "settings": {}
+              }
+            ]
           }
-        ]
-      }
+        }
+      ],
+      "collapsed": true
     },
     {
-      "id": "b713af96-f5cd-4ce5-b319-284f5c78e4a1",
-      "name": "此刻速记",
-      "type": "Capture",
-      "command": true,
-      "appendLink": false,
-      "captureTo": "",
-      "captureToActiveFile": true,
-      "activeFileWritePosition": "cursor",
-      "createFileIfItDoesntExist": {
-        "enabled": false,
-        "createWithTemplate": false,
-        "template": ""
-      },
-      "format": {
-        "enabled": false,
-        "format": ""
-      },
-      "insertAfter": {
-        "enabled": false,
-        "after": "",
-        "insertAtEnd": false,
-        "considerSubsections": false,
-        "createIfNotFound": false,
-        "createIfNotFoundLocation": "top"
-      },
-      "newLineCapture": {
-        "enabled": false,
-        "direction": "below"
-      },
-      "prepend": false,
-      "task": false,
-      "openFile": true,
-      "fileOpening": {
-        "location": "tab",
-        "direction": "vertical",
-        "mode": "default",
-        "focus": true
-      }
-    },
-    {
-      "id": "3e471c1c-d6c3-4b63-9573-049123c3529d",
+      "id": "80c59c1f-f05e-4643-957e-793d2296f8e1",
       "name": "每日日记",
-      "type": "Macro",
-      "command": false,
-      "runOnStartup": true,
-      "macro": {
-        "name": "每日日记",
-        "id": "ee5a549a-0140-4c73-bdc2-9d9d75c3bddb",
-        "commands": [
-          {
-            "name": "每日日记",
-            "type": "NestedChoice",
-            "id": "cdeba290-7478-45a2-b9ef-fac2bc5f201d",
-            "choice": {
-              "id": "1f844664-438a-4d49-814f-a908262a731d",
-              "name": "每日日记",
-              "type": "Template",
-              "command": false,
-              "templatePath": "99-模板/TP-日记.md",
-              "fileNameFormat": {
-                "enabled": true,
-                "format": "{{DATE:YYYY-MM-DD}}"
-              },
-              "folder": {
-                "enabled": true,
-                "folders": [
-                  "20-日志/01-Daily"
-                ],
-                "chooseWhenCreatingNote": false,
-                "createInSameFolderAsActiveFile": false,
-                "chooseFromSubfolders": false
-              },
-              "appendLink": false,
-              "openFile": false,
-              "fileOpening": {
-                "location": "tab",
-                "direction": "vertical",
-                "mode": "default",
-                "focus": true
-              },
-              "fileExistsMode": "Nothing",
-              "setFileExistsBehavior": true
-            }
+      "type": "Multi",
+      "command": true,
+      "choices": [
+        {
+          "id": "1c6d3d6a-9d6c-4f02-8c73-53b9f1c2c111",
+          "name": "加-今日待办",
+          "type": "Capture",
+          "command": true,
+          "appendLink": false,
+          "captureTo": "20-日志/01-Daily/{{DATE:YYYY-MM-DD}}.md",
+          "captureToActiveFile": false,
+          "activeFileWritePosition": "cursor",
+          "createFileIfItDoesntExist": {
+            "enabled": true,
+            "createWithTemplate": true,
+            "template": "99-模板/TP-日记.md"
+          },
+          "format": {
+            "enabled": true,
+            "format": "- [ ] {{VALUE}}"
+          },
+          "insertAfter": {
+            "enabled": true,
+            "after": "## 今日待办",
+            "insertAtEnd": false,
+            "considerSubsections": false,
+            "createIfNotFound": true,
+            "createIfNotFoundLocation": "bottom"
+          },
+          "newLineCapture": {
+            "enabled": false,
+            "direction": "below"
+          },
+          "prepend": false,
+          "task": false,
+          "openFile": true,
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "mode": "default",
+            "focus": true
           }
-        ]
-      }
-    },
-    {
-      "id": "1c6d3d6a-9d6c-4f02-8c73-53b9f1c2c111",
-      "name": "加-今日待办",
-      "type": "Capture",
-      "command": true,
-      "appendLink": false,
-      "captureTo": "20-日志/01-Daily/{{DATE:YYYY-MM-DD}}.md",
-      "captureToActiveFile": false,
-      "activeFileWritePosition": "cursor",
-      "createFileIfItDoesntExist": {
-        "enabled": true,
-        "createWithTemplate": true,
-        "template": "99-模板/TP-日记.md"
-      },
-      "format": {
-        "enabled": true,
-        "format": "- [ ] {{VALUE}}"
-      },
-      "insertAfter": {
-        "enabled": true,
-        "after": "## 今日待办",
-        "insertAtEnd": true,
-        "considerSubsections": false,
-        "createIfNotFound": true,
-        "createIfNotFoundLocation": "bottom"
-      },
-      "newLineCapture": {
-        "enabled": false,
-        "direction": "below"
-      },
-      "prepend": false,
-      "task": false,
-      "openFile": false,
-      "fileOpening": {
-        "location": "tab",
-        "direction": "vertical",
-        "mode": "default",
-        "focus": true
-      }
-    },
-    {
-      "id": "7f3d9d1a-84ef-4d03-9a8c-ef3b28b7f3e2",
-      "name": "加-工作流水",
-      "type": "Capture",
-      "command": true,
-      "appendLink": false,
-      "captureTo": "20-日志/01-Daily/{{DATE:YYYY-MM-DD}}.md",
-      "captureToActiveFile": false,
-      "activeFileWritePosition": "cursor",
-      "createFileIfItDoesntExist": {
-        "enabled": true,
-        "createWithTemplate": true,
-        "template": "99-模板/TP-日记.md"
-      },
-      "format": {
-        "enabled": true,
-        "format": "- {{DATE:HH:mm}} {{VALUE}}\n"
-      },
-      "insertAfter": {
-        "enabled": true,
-        "after": "## 工作流水",
-        "insertAtEnd": false,
-        "considerSubsections": false,
-        "createIfNotFound": true,
-        "createIfNotFoundLocation": "bottom"
-      },
-      "newLineCapture": {
-        "enabled": false,
-        "direction": "below"
-      },
-      "prepend": false,
-      "task": false,
-      "openFile": false,
-      "fileOpening": {
-        "location": "tab",
-        "direction": "vertical",
-        "mode": "default",
-        "focus": true
-      }
-    },
-    {
-      "id": "4b5c7a0f-6f43-4c49-90b4-9c7346a8e5cd",
-      "name": "加-每日反思",
-      "type": "Capture",
-      "command": true,
-      "appendLink": false,
-      "captureTo": "20-日志/01-Daily/{{DATE:YYYY-MM-DD}}.md",
-      "captureToActiveFile": false,
-      "activeFileWritePosition": "cursor",
-      "createFileIfItDoesntExist": {
-        "enabled": true,
-        "createWithTemplate": true,
-        "template": "99-模板/TP-日记.md"
-      },
-      "format": {
-        "enabled": true,
-        "format": "- {{DATE:HH:mm}} {{VALUE}}\n"
-      },
-      "insertAfter": {
-        "enabled": true,
-        "after": "## 每日反思",
-        "insertAtEnd": false,
-        "considerSubsections": false,
-        "createIfNotFound": true,
-        "createIfNotFoundLocation": "bottom"
-      },
-      "newLineCapture": {
-        "enabled": false,
-        "direction": "below"
-      },
-      "prepend": false,
-      "task": false,
-      "openFile": false,
-      "fileOpening": {
-        "location": "tab",
-        "direction": "vertical",
-        "mode": "default",
-        "focus": true
-      }
+        },
+        {
+          "id": "7f3d9d1a-84ef-4d03-9a8c-ef3b28b7f3e2",
+          "name": "加-工作流水",
+          "type": "Capture",
+          "command": true,
+          "appendLink": false,
+          "captureTo": "20-日志/01-Daily/{{DATE:YYYY-MM-DD}}.md",
+          "captureToActiveFile": false,
+          "activeFileWritePosition": "cursor",
+          "createFileIfItDoesntExist": {
+            "enabled": true,
+            "createWithTemplate": true,
+            "template": "99-模板/TP-日记.md"
+          },
+          "format": {
+            "enabled": true,
+            "format": "- {{DATE:HH:mm}} {{VALUE}}\n"
+          },
+          "insertAfter": {
+            "enabled": true,
+            "after": "## 工作流水",
+            "insertAtEnd": false,
+            "considerSubsections": false,
+            "createIfNotFound": true,
+            "createIfNotFoundLocation": "bottom"
+          },
+          "newLineCapture": {
+            "enabled": false,
+            "direction": "below"
+          },
+          "prepend": false,
+          "task": false,
+          "openFile": false,
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "mode": "default",
+            "focus": true
+          }
+        },
+        {
+          "id": "4b5c7a0f-6f43-4c49-90b4-9c7346a8e5cd",
+          "name": "加-每日反思",
+          "type": "Capture",
+          "command": true,
+          "appendLink": false,
+          "captureTo": "20-日志/01-Daily/{{DATE:YYYY-MM-DD}}.md",
+          "captureToActiveFile": false,
+          "activeFileWritePosition": "cursor",
+          "createFileIfItDoesntExist": {
+            "enabled": true,
+            "createWithTemplate": true,
+            "template": "99-模板/TP-日记.md"
+          },
+          "format": {
+            "enabled": true,
+            "format": "- {{DATE:HH:mm}} {{VALUE}}\n"
+          },
+          "insertAfter": {
+            "enabled": true,
+            "after": "## 每日反思",
+            "insertAtEnd": false,
+            "considerSubsections": false,
+            "createIfNotFound": true,
+            "createIfNotFoundLocation": "bottom"
+          },
+          "newLineCapture": {
+            "enabled": false,
+            "direction": "below"
+          },
+          "prepend": false,
+          "task": false,
+          "openFile": false,
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "mode": "default",
+            "focus": true
+          }
+        }
+      ],
+      "collapsed": false
     }
   ],
   "inputPrompt": "single-line",

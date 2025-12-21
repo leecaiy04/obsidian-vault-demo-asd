@@ -151,11 +151,9 @@ tags: [<% finalTags.join(", ") %>]
 
 ---
 ## 今日待办
-- [ ] 
+
 
 ## 工作流水
-
-- <% tp.date.now("YYYY-MM-DD HH:mm") %> 初始化创建
 
 ## 每日反思
 
