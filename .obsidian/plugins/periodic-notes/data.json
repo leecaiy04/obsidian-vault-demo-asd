@@ -1,0 +1,35 @@
+{
+  "showGettingStartedBanner": false,
+  "hasMigratedDailyNoteSettings": false,
+  "hasMigratedWeeklyNoteSettings": false,
+  "daily": {
+    "format": "",
+    "template": "99-模板/TP-日记.md",
+    "folder": "20-日志/01-Daily",
+    "enabled": true
+  },
+  "weekly": {
+    "format": "",
+    "template": "99-模板/TP-周记.md",
+    "folder": "20-日志/02-Weekly",
+    "enabled": true
+  },
+  "monthly": {
+    "format": "",
+    "template": "99-模板/TP-月记.md",
+    "folder": "20-日志/03-Monthly",
+    "enabled": true
+  },
+  "quarterly": {
+    "format": "",
+    "template": "",
+    "folder": "",
+    "enabled": false
+  },
+  "yearly": {
+    "format": "",
+    "template": "99-模板/TP-年记.md",
+    "folder": "20-日志/04-Yearly",
+    "enabled": true
+  }
+}

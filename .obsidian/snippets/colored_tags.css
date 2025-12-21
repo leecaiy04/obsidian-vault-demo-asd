@@ -1,0 +1,42 @@
+/* 
+ * 标签颜色增强 (Tag Styles)
+ * 对应工作流中的标签体系
+ */
+
+/* 🔴 阻塞/等待 (Status/Waiting) */
+.tag[href="#Status/Waiting"],
+.tag[href="#Status/阻塞"] {
+    background-color: rgba(233, 49, 71, 0.2);
+    border: 1px solid rgba(233, 49, 71, 0.5);
+    color: #ff5555 !important;
+}
+
+/* 🟢 进行中/活跃 (Status/Active) */
+.tag[href="#Status/Active"],
+.tag[href="#Status/进行中"] {
+    background-color: rgba(66, 185, 131, 0.2);
+    border: 1px solid rgba(66, 185, 131, 0.5);
+    color: #42b983 !important;
+}
+
+/* 🔵 话题 (Topic/*) */
+.tag[href^="#Topic/"] {
+    background-color: rgba(52, 152, 219, 0.15);
+    border-radius: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* 🟡 部门 (Dept/*) */
+.tag[href^="#Dept/"] {
+    background-color: rgba(241, 196, 15, 0.15);
+    color: #d4ac0d !important;
+}
+
+/* 🟣 重点关注 (Special) */
+.tag[href="#重点"],
+.tag[href="#Important"] {
+    background-color: #8e44ad;
+    color: white !important;
+    font-weight: bold;
+}

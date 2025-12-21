@@ -1,0 +1,10 @@
+{
+    "id": "buttons",
+    "name": "Buttons",
+    "description": "在您的 Obsidian 笔记中创建按钮以运行命令、打开链接和插入模板",
+    "version": "0.9.13",
+    "author": "shabegom",
+    "authorUrl": "https://shbgm.ca",
+    "isDesktopOnly": false,
+    "minAppVersion": "0.12.8"
+}

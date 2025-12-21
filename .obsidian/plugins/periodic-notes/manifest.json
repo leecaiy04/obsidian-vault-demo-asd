@@ -1,0 +1,10 @@
+{
+    "id": "periodic-notes",
+    "name": "Periodic Notes",
+    "description": "创建并管理你的日、周和月笔记",
+    "version": "0.0.17",
+    "author": "Liam Cain",
+    "authorUrl": "https://github.com/liamcain/",
+    "isDesktopOnly": false,
+    "minAppVersion": "0.10.11"
+}

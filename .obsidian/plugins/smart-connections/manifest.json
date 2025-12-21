@@ -1,0 +1,10 @@
+{
+    "id": "smart-connections",
+    "name": "Smart Connections",
+    "author": "Brian Petro",
+    "description": "使用OpenAI的人工智能查找类似笔记的链接。",
+    "minAppVersion": "1.1.0",
+    "authorUrl": "https://wfhbrian.com",
+    "isDesktopOnly": false,
+    "version": "3.0.80"
+}

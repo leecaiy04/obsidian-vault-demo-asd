@@ -1,0 +1,18 @@
+# 忽略 Obsidian 的工作区缓存（这是针对你这台电脑的窗口布局，不需要同步）
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/graph.json
+recent-files-obsidian/data.json
+
+# 忽略回收站
+.trash/
+
+# 忽略不需要备份的系统文件夹（如果有的话）
+.DS_Store
+thumbs.db
+
+
+
+# Ignore Smart Environment folder
+.smart-env

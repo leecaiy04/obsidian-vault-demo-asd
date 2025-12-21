@@ -1,0 +1,120 @@
+{
+  "presetFields": [
+    {
+      "type": "Select",
+      "tagName": "select",
+      "icon": "right-triangle",
+      "tooltip": "Accepts a single value from a list",
+      "colorClass": "select",
+      "options": {
+        "sourceType": "ValuesList",
+        "valuesList": {
+          "1": "🔴 高",
+          "2": "🟡 中",
+          "3": "🔵 低"
+        }
+      },
+      "name": "priority",
+      "id": "0I5C4U",
+      "path": ""
+    },
+    {
+      "type": "Multi",
+      "tagName": "multi",
+      "icon": "bullet-list",
+      "tooltip": "Accepts multiple values from a list",
+      "colorClass": "multi",
+      "options": {
+        "sourceType": "ValuesList",
+        "valuesList": {
+          "2": "发改委",
+          "3": "自然资源局"
+        }
+      },
+      "name": "department",
+      "id": "Y9e5BL",
+      "path": ""
+    },
+    {
+      "type": "Select",
+      "tagName": "select",
+      "icon": "right-triangle",
+      "tooltip": "Accepts a single value from a list",
+      "colorClass": "select",
+      "options": {
+        "sourceType": "ValuesList",
+        "valuesList": {
+          "1": "李秀明"
+        }
+      },
+      "name": "owner",
+      "id": "YNNu8Z",
+      "path": ""
+    },
+    {
+      "type": "Select",
+      "tagName": "select",
+      "icon": "right-triangle",
+      "tooltip": "Accepts a single value from a list",
+      "colorClass": "select",
+      "options": {
+        "sourceType": "ValuesList",
+        "valuesList": {
+          "1": "🌑 未开始",
+          "2": "🟢 进行中",
+          "3": "🟠 阻塞",
+          "4": "✅ 已完成",
+          "5": " 🧊 归档"
+        }
+      },
+      "name": "status",
+      "id": "YZBR2r",
+      "path": ""
+    },
+    {
+      "tagName": "file",
+      "icon": "link",
+      "colorClass": "file",
+      "type": "File",
+      "tooltip": "Accepts an internal link",
+      "options": {
+        "dvQueryString": "dv.pages('\"30-业务档案\"').filter(p => !p.file.path.includes(\"附件\") && !p.file.path.includes(\"_Archive\"))\n"
+      },
+      "name": "project",
+      "id": "6Nb8qh",
+      "path": ""
+    }
+  ],
+  "fileClassQueries": [],
+  "displayFieldsInContextMenu": true,
+  "globallyIgnoredFields": [],
+  "classFilesPath": null,
+  "isAutosuggestEnabled": true,
+  "fileClassAlias": "fileClass",
+  "settingsVersion": "5.8",
+  "firstDayOfWeek": 1,
+  "enableLinks": true,
+  "enableTabHeader": true,
+  "enableEditor": true,
+  "enableBacklinks": true,
+  "enableStarred": true,
+  "enableFileExplorer": true,
+  "enableSearch": true,
+  "enableProperties": true,
+  "tableViewMaxRecords": 20,
+  "frontmatterListDisplay": "asArray",
+  "fileClassExcludedFolders": [],
+  "showIndexingStatusInStatusBar": true,
+  "fileIndexingExcludedFolders": [],
+  "fileIndexingExcludedExtensions": [
+    ".excalidraw.md"
+  ],
+  "fileIndexingExcludedRegex": [],
+  "frontmatterOnly": false,
+  "showFileClassSelectInModal": true,
+  "chooseFileClassAtFileCreation": true,
+  "autoInsertFieldsAtFileClassInsertion": true,
+  "fileClassIcon": "package",
+  "isAutoCalculationEnabled": true,
+  "disableDataviewPrompt": false
+}
