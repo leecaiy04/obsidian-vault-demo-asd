@@ -1,40 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "2025-12-22",
-      "path": "20-日志/01-Daily/2025-12-22.md"
+      "basename": "00-工作台",
+      "path": "00-工作台.md"
     },
     {
-      "basename": "2025-12-21",
-      "path": "20-日志/01-Daily/2025-12-21.md"
+      "basename": "README",
+      "path": "README.md"
     },
     {
       "basename": "界面与交互插件指南",
       "path": "99-文档/界面与交互插件指南.md"
-    },
-    {
-      "basename": "数据库",
-      "path": "数据库.base"
-    },
-    {
-      "basename": "2025-W52",
-      "path": "20-日志/02-Weekly/2025-W52.md"
-    },
-    {
-      "basename": "20251222-大苏打速度",
-      "path": "30-业务档案/01-工作-审批/可研/20251222-大苏打速度.md"
-    },
-    {
-      "basename": "2025-12-20",
-      "path": "20-日志/01-Daily/2025-12-20.md"
-    },
-    {
-      "basename": "2025年第三批前期计划",
-      "path": "30-业务档案/01-工作-审批/04-前期计划/2025年第三批前期计划.md"
-    },
-    {
-      "basename": "00-工作台",
-      "path": "00-工作台.md"
     },
     {
       "basename": "Dataview与Omnisearch联合搜索示例",
@@ -81,28 +57,12 @@
       "path": "99-文档/Templater脚本指南.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
       "basename": "何家村产业服务中心",
       "path": "30-业务档案/01-工作-审批/03-备案/何家村产业服务中心.md"
     },
     {
-      "basename": "2025-W47",
-      "path": "20-日志/02-Weekly/2025-W47.md"
-    },
-    {
       "basename": "大三大四",
       "path": "大三大四.md"
-    },
-    {
-      "basename": "何家村产业服务中心",
-      "path": "30-业务档案/04-工作-投资条线/01-项目审批/何家村产业服务中心.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "30-业务档案/04-工作-投资条线/未命名.md"
     }
   ],
   "omittedPaths": [

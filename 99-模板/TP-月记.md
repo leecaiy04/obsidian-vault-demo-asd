@@ -1,52 +1,46 @@
 ---
-tags: diary/monthly
-month: <% tp.date.now("YYYY-MM") %>
----
----
 created: <% tp.file.creation_date() %>
-week: <% tp.file.title %>
-# 自动计算本周的起始和结束日期，供 Dataview 查询使用
-date_start: <% tp.date.weekday("YYYY-MM-DD", 0, tp.file.title, "YYYY-[W]WW") %>
-date_end: <% tp.date.weekday("YYYY-MM-DD", 6, tp.file.title, "YYYY-[W]WW") %>
-tags: [周记]
+month: <% tp.file.title %>
+tags: [月记]
 ---
+# 📅 <% tp.file.title %> 月度复盘
 
-# 📅 <% tp.file.title %> 周度复盘
+<< [[<% moment(tp.file.title).subtract(1, 'months').format("YYYY-MM") %>|上一月]] | [[<% moment(tp.file.title).add(1, 'months').format("YYYY-MM") %>|下一月]] >>
 
-<< [[<% tp.date.weekday("YYYY-[W]WW", -7, tp.file.title, "YYYY-[W]WW") %>|上一周]] | [[<% tp.date.weekday("YYYY-[W]WW", 7, tp.file.title, "YYYY-[W]WW") %>|下一周]] >>
+## ✅ 本月重点成果
+```dataview
+TASK
+FROM "20-日志/01-Daily"
+WHERE completed
+AND file.name >= "<% moment(tp.file.title).startOf('month').format("YYYY-MM-DD") %>"
+AND file.name <= "<% moment(tp.file.title).endOf('month').format("YYYY-MM-DD") %>"
+GROUP BY file.link
+```
 
-## 📊 核心指标达成 (自动统计)
+## 📝 本月工作流水汇总
+> [!info] 过程记录 聚合每天 `## 📝 工作流水` 下的列表内容
+```dataview
+TABLE WITHOUT ID 
+	link(file.link, dateformat(date(file.name), "MM-dd cccc")) as "日期", 
+	L.text as "工作内容"
+FROM "20-日志/01-Daily"
+FLATTEN file.lists as L
+WHERE contains(meta(L.section).subpath, "工作流水")
+AND file.name >= "<% moment(tp.file.title).startOf('month').format("YYYY-MM-DD") %>"
+AND file.name <= "<% moment(tp.file.title).endOf('month').format("YYYY-MM-DD") %>"
+SORT file.name ASC
+```
 
-```dataviewjs
-// === 配置区域 ===
-const start = dv.current().date_start;
-const end = dv.current().date_end;
-const workFolder = "30-业务档案"; // 您的业务归档文件夹
-
-// 1. 获取本周创建的所有业务文档
-const pages = dv.pages(`"${workFolder}"`)
-    .where(p => {
-        const ctime = moment(p.file.ctime.ts).format("YYYY-MM-DD");
-        return ctime >= start && ctime <= end;
-    });
-
-// 2. 统计【审批】类项目
-const approvalCount = pages.where(p => p.category == "审批").length;
-
-// 3. 统计【资金/要素】涉及金额
-// 筛选分类为 "资金支付" 或 "要素" 或 "财务" 的文档
-const moneyPages = pages.where(p => 
-    p.category == "资金支付" || p.category == "要素" || p.category == "财务" || p.category == "全生命周期"
-);
-
-// 计算总金额 (假设属性名为 '涉及金额' 或 'amount')
-let totalAmount = 0;
-for (let p of moneyPages) {
-    // 优先取中文属性，没有则取英文
-    let amt = p["涉及金额"] || p.amount || 0;
-    totalAmount += Number(amt);
-}
-// 格式化金额 (保留2位小数，加逗号)
-const formattedAmount = totalAmount.toLocaleString('zh-CN', { style: 'currency', currency: 'CNY' });
-
-// 4. 输出结果
+## 🧠 本月每日反思汇总
+> [!quote] 每日反思 聚合每天 `## 🧠 每日反思` 下的列表内容
+```dataview
+TABLE WITHOUT ID 
+	link(file.link, dateformat(date(file.name), "MM-dd cccc")) as "日期", 
+	L.text as "反思与复盘"
+FROM "20-日志/01-Daily"
+FLATTEN file.lists as L
+WHERE contains(meta(L.section).subpath, "每日反思")
+AND file.name >= "<% moment(tp.file.title).startOf('month').format("YYYY-MM-DD") %>"
+AND file.name <= "<% moment(tp.file.title).endOf('month').format("YYYY-MM-DD") %>"
+SORT file.name ASC
+```

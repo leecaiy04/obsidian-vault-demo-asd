@@ -1,20 +1,20 @@
 [
   "dataview",
-  "templater-obsidian",
-  "obsidian-git",
-  "remotely-save",
-  "smart-connections",
-  "calendar",
   "recent-files-obsidian",
   "obsidian-kanban",
   "metadata-menu",
-  "buttons",
-  "obsidian42-brat",
   "tag-wrangler",
   "periodic-notes",
   "omnisearch",
   "obsidian-tasks-plugin",
   "global-proxy",
   "quickadd",
-  "i18n"
+  "i18n",
+  "obsidian42-brat",
+  "buttons",
+  "calendar",
+  "obsidian-git",
+  "templater-obsidian",
+  "smart-connections",
+  "remotely-save"
 ]
