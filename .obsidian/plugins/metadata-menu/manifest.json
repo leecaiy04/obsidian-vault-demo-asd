@@ -1,7 +1,7 @@
 {
     "id": "metadata-menu",
     "name": "Metadata Menu",
-    "version": "0.8.10",
+    "version": "0.8.11",
     "minAppVersion": "1.4.16",
     "description": "图形化的 Frontmater 管理器，Metadata Menu 插件是基于 dataview 的一个功能增强的插件。它基于 属性::值 的一种结构，可以很方便的修改一个特定属性的值。比如：性别::男。通过插件，就可以通过鼠标点击，来直接修改为 女。",
     "author": "mdelobelle",
